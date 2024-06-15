@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <section class="col-3">
+            <h6 class="text-danger my-3" style="font-weight: bold;">Sorting</h6>
+            <select class="form-select" aria-label="Default select example" (change)="onSortSelect($event)">
+                <option *ngFor="let item of sortOptions" [value]="item.value">{{item.name}}</option>
+            </select>
+            <h6 class="text-danger my-3" style="font-weight: bold;">Category</h6>
+            <ul class="list-group">
+                <li class="list-group-item" aria-current="true" *ngFor="let item of categories"
+                    [class.active]="item.id === shopParams.categoryId" [value]="item.id"
+                    (click)="onCategorySelect(item.id)">{{item.name}}</li>
+            </ul>
+        </section>
+        <section class="col-9">
+            <div class="d-flex justify-content-between align-items-center pb-4 pt-4">
+                <div class="col-3">
+                    <span>showing <strong>5</strong>of<strong>15</strong>Results</span>
+                </div>
+                <div class="col-9">
+                    <div class="input-group">
+                        <input #myInput type="text" class="form-control mr-2" type="text" placeholder="Search Here...">
+                        <button class="btn btn-outline-success" type="button"
+                            (click)="onSearch(myInput.value)">Search</button>
+                        <button class="btn btn-outline-warning" type="button" (click)="onReset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col-3" *ngFor="let item of products">
+                    <app-shop-item [product]="item"></app-shop-item>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
