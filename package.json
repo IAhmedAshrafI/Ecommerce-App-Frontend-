@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.0",
+    "@angular/cdk": "^14.0.0",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
@@ -27,6 +28,7 @@
     "ngx-bootstrap": "^12.0.0",
     "ngx-pagination": "^6.0.3",
     "ngx-spinner": "^17.0.0",
+    "ngx-toastr": "^14.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "xng-breadcrumb": "^11.0.0",

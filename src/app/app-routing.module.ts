@@ -12,6 +12,12 @@ const routes: Routes = [
   },
   { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule), data: { breadcrumb: { skip: true } } },
   {
+    path: 'orders',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./core/orders/orders.module')
+      .then(mo => mo.OrdersModule), data: { breadcurmb: 'Orders' }
+  },
+  {
     canActivate: [AuthGuard],
     path: 'checkout', loadChildren: () => import('./checkout/checkout.module')
       .then(mo => mo.CheckoutModule), data: { breadcurmb: 'Checkout' }
