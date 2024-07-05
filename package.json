@@ -20,12 +20,16 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "angular-uuid": "^0.0.4",
     "bootstrap": "^5.3.3",
+    "bootswatch": "^5.3.3",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^12.0.0",
     "ngx-pagination": "^6.0.3",
+    "ngx-spinner": "^17.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "xng-breadcrumb": "^11.0.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

@@ -8,6 +8,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ShopModule } from './shop/shop.module';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
-    HomeModule
+    HomeModule,
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule,
 
   ],
   providers: [],
