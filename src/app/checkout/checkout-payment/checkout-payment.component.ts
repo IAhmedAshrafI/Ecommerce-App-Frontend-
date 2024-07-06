@@ -80,6 +80,7 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
   async submitOrder() {
     this.loading = true;
     const basket = this.basketServices.getCurrentBasketValue();
+    if (!basket) throw new Error('This basket can not found');
 
     try {
       const createOrder = await this.createOrder(basket);
@@ -87,7 +88,7 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
 
 
       if (paymentResult.paymentIntent) {
-        this.basketServices.deleteLocalBasekt(basket.id);
+        this.basketServices.deleteBasket(basket);
         const navigationExtras: NavigationExtras = { state: createOrder }
         this.router.navigate(['checkout/success'], navigationExtras)
       } else {
